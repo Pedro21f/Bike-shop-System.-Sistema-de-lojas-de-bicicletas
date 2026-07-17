@@ -1,0 +1,43 @@
+class Bicycle:
+    def __init__(self, color, model, year, value): # Attributes are characteristics of the object, defined inside the constructor method (__init__)
+        self.color = color
+        self.model = model # The __init__ method is an initializer or constructor executed when a new class instance is created
+        self.year = year
+        self.value = value
+        self.gear = 1
+        # Values prefixed with (self.) are considered attributes
+
+    # To define a method, use the def keyword, name it (e.g., ring_bell, stop, ride...) and define at least one argument followed by a colon (e.g., (self): )
+
+    def ring_bell(self): # method 1
+        print("Ring-ring!")
+
+    def stop(self): # method 2
+        print("Stopping bicycle...")
+        print("Bicycle stopped!")
+    # Everything with the keyword (self.) belongs to the object instance
+
+    def ride(self): # method 3
+        print("Vroommmmm...")
+
+    def change_gear(self, new_gear): # method 4 (corrected with self and proper logic)
+        print("Changing gear...")
+        if new_gear > self.gear:
+            self.gear = new_gear
+            print(f"Gear changed to {self.gear}")
+        else:
+            print("Could not change gear")
+
+    def __str__(self):
+        return f"{self.__class__.__name__}: {', '.join([f'{key}={value}' for key, value in self.__dict__.items()])}"
+
+
+bike1 = Bicycle("red", "caloi", "2022", "600")
+bike1.ring_bell()
+bike1.ride()
+bike1.stop()
+print(bike1)
+
+bike2 = Bicycle("green", "monark", "2000", "300")
+print(bike2)
+bike2.change_gear(3) # Example of changing gear
