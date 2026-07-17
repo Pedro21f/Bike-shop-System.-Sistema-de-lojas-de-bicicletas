@@ -1,0 +1,48 @@
+class Bicicleta:
+    def __init__(self, cor, modelo, ano, valor): #atributos são caracteristicas do objeto, e são definidos dentro do método construtor (init)
+        self.cor = cor
+        self.modelo = modelo # O método __init__ é um inicializador ou construtor  executado quando uma nova instância de classes é criada
+        self.ano = ano
+        self.valor = valor
+        self.marcha = 1
+        # Valores com (self.) são considerados atributos
+
+    # Para definir um método, coloca-se a palavra def, da um nome (exemplo, buzinar, parar, correr...) e definir, no minimo, um argumento com dois pontos(exemplo: (self): )
+
+    def buzinar(self): # método 1
+        print("Plimpp")
+
+    def parar(self): # método 2
+        print("Parando bicicleta...")
+        print("Bicicleta parada!")
+# Tudo que tem a palavra (self.) é uma instância do objeto
+
+    def correr(self): # método 3
+        print("Vrummmmm...")
+
+    def trocar_marcha(nro_marcha): # método 4
+        print("Trocando marcha")
+
+
+        def _trocar_marcha():
+            if nro_marcha > self.marcha:
+                print("Marcha alterada")
+            else:
+                print("Não foi possível trocar de marcha")
+    # def __str__(self):
+       # return f"Bicicleta: {self.cor}, {self.modelo}, {self.ano}, {self.valor}" # método manual
+
+    def __str__(self):
+        return f"{self.__class__.__name__}: {', '.join([f'{chave}={valor}' for chave, valor in self.__dict__.items()])}"
+
+
+bike1 = Bicicleta("vermelha", "caloi", "2022", "600")
+bike1.buzinar()
+bike1.correr()
+bike1.parar()
+print(bike1)
+
+bike2 = Bicicleta("verde", "monark", "2000", "300")
+# bike2.buzinar() Funciona porque buzinar() é um método da classe Bicicleta(ja foi definido)
+print(bike2)
+bike2.trocar_marcha()
