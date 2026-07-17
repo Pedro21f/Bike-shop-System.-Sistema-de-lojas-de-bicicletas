@@ -5,7 +5,7 @@ class Bicycle:
         self.year = year
         self.value = value
         self.gear = 1
-        # Values prefixed with (self.) are considered attributes
+        # Values prefixed with (self.) are considered attributes.
 
     # To define a method, use the def keyword, name it (e.g., ring_bell, stop, ride...) and define at least one argument followed by a colon (e.g., (self): )
 
