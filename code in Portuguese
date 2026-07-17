@@ -5,7 +5,7 @@ class Bicicleta:
         self.ano = ano
         self.valor = valor
         self.marcha = 1
-        # Valores com (self.) são considerados atributos
+        # Valores com (self.) são considerados atributos.
 
     # Para definir um método, coloca-se a palavra def, da um nome (exemplo, buzinar, parar, correr...) e definir, no minimo, um argumento com dois pontos(exemplo: (self): )
 
