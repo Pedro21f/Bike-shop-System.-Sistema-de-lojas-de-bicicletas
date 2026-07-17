@@ -1,4 +1,4 @@
-# Bike Shop System
+# Bike Shop System (ENGLISH)
 
 [![Python Version](https://shields.io)](https://python.org)
 
